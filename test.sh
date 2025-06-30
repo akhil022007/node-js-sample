@@ -11,7 +11,7 @@ echo "Attempting to connect to $APP_URL"
 
 for i in $(seq 1 $MAX_RETRIES); do
     echo "Attempt $i/$MAX_RETRIES: Checking application status..."
-    STATUS_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$APP_URL")
+    STATUS_CODE=$(curl -s -L -o /dev/null -w "%{http_code}" "$APP_URL")
 
     if [ "$STATUS_CODE" -eq 200 ]; then
         echo "Application is up and running! (Status: $STATUS_CODE)"
