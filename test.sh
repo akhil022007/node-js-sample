@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HOST_IP=$(ip route | awk '/default/ { print $3 }')
+HOST_IP=$(grep nameserver /etc/resolv.conf | awk '{print $2}' | head -n 1)
 
 APP_URL="http://${HOST_IP}:80"
 MAX_RETRIES=15

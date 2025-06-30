@@ -9,14 +9,7 @@ environment {
 stages {
 
 
-   stage('Prepare Environment') {
-            steps {
-                script {
-                    echo "Installing necessary tools on Jenkins agent..."
-                    sh 'sudo apt-get update && apt-get install -y iproute2 curl'
-                }
-            }
-        }
+   
   
     stage('Checkout') {
         steps {
