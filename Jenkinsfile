@@ -1,3 +1,5 @@
+pipeline{
+
 agent any
 
 environment {
@@ -46,4 +48,5 @@ post {
     failure {
         echo "Pipeline failed. Check Jenkins console output for errors."
     }
+}
 }
