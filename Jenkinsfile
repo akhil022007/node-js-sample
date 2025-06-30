@@ -13,7 +13,7 @@ stages {
             steps {
                 script {
                     echo "Installing necessary tools on Jenkins agent..."
-                    sh 'apt-get update && apt-get install -y iproute2 curl'
+                    sh 'sudo apt-get update && apt-get install -y iproute2 curl'
                 }
             }
         }
